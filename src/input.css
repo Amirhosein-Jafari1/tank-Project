@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #FF9549;
+    --color-secondary: #FF2B00;
+    --color-dark-1: #181818;
+    --color-dark-2: #252C2C;
+    --color-dark-3: #1C2121;
+    --color-light: #939697
+}
+
+@layer components {
+    .btn {
+        @apply px-6 py-3 rounded-lg cursor-pointer transition-all duration-300 w-full xl:w-fit
+    }
+    
+    .btn-primary {
+        @apply bg-primary hover:bg-orange-500 text-black
+    }
+
+    .btn-secondary {
+        @apply bg-dark-3 hover:bg-primary text-white hover:text-black border border-primary
+    }
+
+    .countdown {
+        @apply rounded-full bg-conic from-primary to-light w-22 xl:w-30 h-22 xl:h-30 relative grid place-content-center before:content-['']
+        before:absolute before:w-20 xl:before:w-28 before:h-20 xl:before:h-28 before:rounded-full before:bg-dark-2 before:top-1 before:left-1
+    }
+
+    .car-property {
+        @apply w-full xl:w-[33%] rounded-xl border border-light py-8 xl:py-4 px-6 flex gap-4
+    }
+
+    .car-features {
+        @apply bg-dark-1 rounded-lg px-4 py-6 flex gap-1.5 w-full xl:w-[25%]
+    }
+
+    .car-image {
+        @apply w-64 xl:w-66 h-44 xl:h-52 shrink-0 object-cover rounded-xl
+    }
+
+    .car-card {
+        @apply w-full flex flex-col xl:flex-row justify-center gap-4 rounded-lg border border-light relative p-4 mb-2
+    }
+
+
+}
+
+@layer utilities{
+    .bg-cars {
+        background-image: url('./assets/img/cars.png');
+    }
+    .bg-map {
+        background-image: url('./assets/img/map.png');
+    }
+}
+@utility bg-cars {
+    background-image: url('./assets/img/cars.png');
+}
+
+@utility bg-backcar {
+    background-image: url('./assets/img/backcar.png');
+}
+
+@utility bg-backcar-2 {
+    background-image: url('./assets/img/backcar2.png');
+}
+
+@utility bg-map {
+    background-image: url('./assets/img/map.png');
+}

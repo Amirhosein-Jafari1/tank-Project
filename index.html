@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css">
+    <title>tank project</title>
+</head>
+<body class="bg-dark-1">
+
+    <header class="flex items-center justify-center gap-4 p-4 text-white relative">
+        <!-- logo -->
+        <img src="src/assets/img/logo.png" alt="logo" class="h-20">
+        <!-- header content -->
+        <nav class="w-full xl:w-[70%]">
+            <!-- upper part -->
+            <div class="flex items-center justify-between  xl:border-b xl:border-light py-2">
+                <div class="xl:flex items-center gap-2 hidden">
+                    <i class="fas fa-location-dot text-light"></i>
+                    <p class="text-light font-semibold">Yaroslavskoe shosse, property 2B, building 3 (MKAD, 95 km)</p>
+                </div>
+    
+                <div class="xl:flex gap-4 hidden">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-gear text-primary"></i>
+                        <p class="text-sm">Schedule a service appointment</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-car text-primary"></i>
+                        <p class="text-sm">Test Drive</p>
+                    </div>
+                </div>
+            </div>
+            <!-- lower part -->
+            <div class="flex items-center justify-between pt-1">
+                <div class="flex flex-col xl:flex-row items-center justify-center xl:gap-4 xl:w-auto w-24">
+                    <h1 class="font-bold text-xl xl:text-3xl">AVTORUS  TANK</h1>
+                    <span class="hidden xl:inline-block">|</span>
+                    <p class="xl:text-xl text-sm">Official dealer</p>
+                </div>
+    
+                <div class="flex items-center gap-10 ">
+                    <div class="hidden xl:inline-block">
+                        <p class="text-xl font-semibold">+7 (999) 999-99-99</p>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-circle text-green-400 text-[5px]"></i>
+                            <span class="text-light">We are in touch</span>
+                        </div>
+                    </div>
+                    <!-- request call button -->
+                    <label for="call-modal" class="xl:bg-primary rounded-lg py-3 px-6 text-black cursor-pointer transition-all duration-300 hover:scale-110">
+                        <i class="fas fa-phone text-white xl:text-black text-2xl xl:text-lg"></i>
+                        <span class="font-semibold hidden xl:inline-block"> Request a call</span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        <!-- mobile menu -->
+        <img src="src/assets/img/menu.svg" alt="menu" class="xl:hidden h-12 mt-4 cursor-pointer">
+        <!-- modal -->
+        <input type="checkbox" id="call-modal" class="hidden peer">
+        <!-- background blur -->
+        <div class="fixed inset-0 bg-neutral-900/60 backdrop-blur-sm hidden peer-checked:block z-10"></div>
+        <!-- modal's content -->
+        <div 
+            class="fixed xl:top-1/2 top-0 xl:left-1/2 left-0 w-full transform xl:-translate-x-1/2 xl:-translate-y-1/2 xl:bg-white bg-neutral-900 xl:w-96 p-6 rounded-2xl shadow-2xl hidden peer-checked:block z-50 xl:text-gray-800 text-white">
+    
+            <div class="flex items-center justify-center gap-4">
+                <img src="src/assets/img/logo.png" alt="logo" class="bg-black p-2 rounded-lg">
+                <h2 class="font-bold text-2xl">AVTORUS TANK</h2>
+                <label for="call-modal" class="text-5xl text-light cursor-pointer">&times;</label>
+            </div>
+    
+            <div class="space-y-4 text-left">
+    
+                <div class="mt-4">
+                        <h3 class="text-lg font-semibold">AVTORUS TANK Losiny Ostrov</h3>
+                        <p class="text-light text-sm">Official dealer</p>
+                </div>
+    
+                <div class="flex flex-col items-start gap-2 xl:text-green-500 text-orange-400 font-semibold">
+                        <div>
+                            <i class="fas fa-phone text-2xl"></i>
+                            <span class="text-2xl">+7 (999) 999-99-99</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-circle text-green-400 text-[5px]"></i>
+                            <span class="text-green-400 text-xs">We are online</span>
+                        </div>
+                </div>
+    
+                <div class="flex items-center gap-2 text-light text-sm">
+                        <i class="fas fa-location-dot text-2xl"></i>
+                        <span>Yaroslavskoe Highway, property 2B, building 3 (MKAD, 95 km)</span>
+                </div>
+    
+                <div class="flex items-center gap-2 text-light text-sm">
+                        <i class="fas fa-clock text-xl"></i>
+                        <span>Daily from 09:00 to 21:00</span>
+                </div>
+    
+                <button
+                        class="w-full xl:bg-blue-500 xl:hover:bg-blue-600 bg-orange-400 hover:bg-amber-600 xl:text-white text-black font-bold py-3 rounded-xl flex items-center justify-center gap-2 mt-4 transition-all duration-300">
+                        <i class="fas fa-phone"></i> Request a Call
+                </button>
+    
+                <div class="flex flex-col gap-2 mt-6">
+                    <button
+                        class="border xl:border-blue-500 xl:text-blue-500 xl:hover:bg-blue-500 xl:hover:text-white border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black font-bold py-2 px-4 rounded-xl flex items-center justify-center gap-2 text-sm transition-all duration-300">
+                        <i class="fas fa-tools"></i> Book service
+                    </button>
+                    <button
+                        class="border xl:border-blue-500 xl:text-blue-500 xl:hover:bg-blue-500 xl:hover:text-white border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black font-bold py-2 px-4 rounded-xl flex items-center justify-center gap-2 text-sm transition-all duration-300">
+                        <i class="fas fa-car"></i> Test drive
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- offer banner -->
+        <section class="w-full relative text-white">
+            <!-- background image -->
+            <div class="w-full h-96 xl:min-h-175 bg-cars xl:bg-center bg-position-[85%_center] bg-cover bg-no-repeat">
+            </div>  
+            <!-- text content -->
+            <div class="static xl:absolute xl:top-[30%] xl:left-[14%] space-y-3 xl:space-y-4 p-4">
+                <p class="text-2xl xl:text-3xl font-semibold">We will improve any conditions</p>
+                <h2 class="text-5xl xl:text-6xl font-bold">TANK 500</h2>
+                <p class="text-2xl xl:text-3xl font-semibold">Only 5 cars left!</p>
+                <button class="btn btn-primary mt-4 ">
+                    <span class="text-lg font-semibold">Get an offer</span>
+                    <i class="fas fa-angle-right"></i>
+                </button>
+            </div>
+        </section>
+        <!-- countdown section -->
+        <section class="mx-auto flex flex-col items-center justify-center w-full  xl:w-[75%] gap-16 text-white mt-6 p-4">
+            <div class="bg-dark-2 rounded-2xl py-4 px-6 w-full flex flex-col xl:flex-row gap-12 xl:gap-2 items-center justify-between">
+                <h2 class="text-3xl xl:text-4xl font-bold">
+                    Validity period<br>
+                    special offers:
+                </h2>
+
+                <div class="flex items-center justify-center gap-2 xl:gap-4">
+                    <div class="countdown from-80% to-80%">
+                        <p class="text-3xl font-bold text-center z-2">3</p>
+                        <span class="text-sm z-2">Day</span>
+                    </div>
+                    <div class="countdown from-50% to-50%">
+                        <p class="text-3xl font-bold text-center z-2">06</p>
+                        <span class="text-sm z-2">Hours</span>
+                    </div>
+                    <div class="countdown from-25% to-25%">
+                        <p class="text-3xl font-bold text-center z-2">14</p>
+                        <span class="text-sm z-2">Minutes</span>
+                    </div>
+                    <div class="countdown from-80% to-80%">
+                        <p class="text-3xl font-bold text-center z-2">55</p>
+                        <span class="text-sm z-2">Seconds</span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary flex items-center justify-center font-semibold">
+                    Find out the price with benefits
+                    <i class="fas fa-angle-right ms-4"></i>
+                </button>
+            </div>
+            <!-- icons -->
+            <div class="flex flex-col xl:flex-row items-center justify-center xl:gap-6 gap-2 w-full">
+                <div class="car-property">
+                    <i class="fas fa-award text-4xl xl:text-3xl m-0 xl:mt-2"></i>
+                    <div class="">
+                        <p class="text-3xl xl:text-xl font-bold mb-2">Official dealer</p>
+                        <span class="hidden xl:inline-block">
+                            We guarantee high quality<br>
+                            service
+                        </span>
+                    </div>
+                </div>
+                <div class="car-property">
+                    <i class="fas fa-clock-rotate-left text-4xl xl:text-3xl m-0 xl:mt-2"></i>
+                    <div class="">
+                        <p class="text-3xl xl:text-xl font-bold mb-2">Buying a card in 1 day</p>
+                        <span class="hidden xl:inline-block">
+                            A convenient purchasing process, including all paperwork.
+                        </span>
+                    </div>
+                </div>
+                <div class="car-property">
+                    <i class="fas fa-clipboard-list text-4xl xl:text-3xl m-0 xl:mt-2"></i>
+                    <div class="">
+                        <p class="text-3xl xl:text-xl font-bold mb-2">All equipments in stock all</p>
+                        <span class="hidden xl:inline-block">
+                            Wide selection of trim levels,
+                            with a full package of documents
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- big offer text -->
+            <div class="text-center text-3xl xl:text-5xl font-bold">
+                Reserve a car today and get an <span class="text-primary">extra ₽100,000 off</span>
+            </div>
+            <!-- cars models -->
+            <div class="flex items-center justify-center gap-2 xl:gap-4">
+                <!-- car 1 -->
+                <div class="flex flex-col items-center w-52">
+                    <img src="./src/assets/img/tank500.png" alt="Tank 500" class="w-full h-full object-cover">
+                    <span>TANK 500</span>
+                </div>
+                <!-- car 2 -->
+                <div class="flex flex-col items-center w-52">
+                    <img src="./src/assets/img/tank300.png" alt="Tank 300" class="w-full h-full object-cover">
+                    <span>TANK 300</span>
+                </div>
+            </div>
+        </section>
+        <!-- tank 300 offer section -->
+        <section class="text-white p-6 bg-dark-3 mt-6">
+            <div class="mx-auto w-full xl:w-[75%] flex flex-col items-center gap-4">
+                <!-- title -->
+                <div class="w-full flex flex-col xl:flex-row justify-center gap-2">
+                    <!-- car information -->
+                    <div class="flex flex-col items-start gap-4 w-full  xl:w-[35%] pt-4 xl:pt-14 order-2 xl:order-1">
+                        <p class="text-primary text-2xl font-semibold">Only at Avtorus!</p>
+                        <h3 class="text-4xl font-bold">TANK 300</h3>
+                        <p class="text-3xl font-semibold">Benefit on Trade-In up to 450,000 ₽</p>
+                        <div class="flex items-center justify-center gap-6 bg-secondary rounded-2xl py-2 px-8">
+                            <i class="fas fa-triangle-exclamation"></i>
+                            <p>Limited Time Offer!</p>
+                            <i class="fas fa-triangle-exclamation"></i>
+                        </div>
+                        <!-- buttons -->
+                        <div class="space-y-3">
+                            <button class="btn btn-primary w-full py-4">
+                                <span>Find out the price on promotion</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                            <button class="btn btn-secondary w-full py-4">
+                                <span>Test drive</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                            <button class="btn btn-secondary w-full py-4">
+                                <span>Calculate a loan</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- car model -->
+                    <div class="flex flex-col xl:flex-row items-center justify-center gap-2 w-full xl:w-[65%] order-1 xl:order-2">
+                        <div class="relative pt-14">
+                            <img src="src/assets/img/main.png" alt="tank 300" class=" ">
+                            <!-- label -->
+                            <label  class="absolute top-16 right-8 text-sm xl:top-24 xl:right-40 rotate-20 bg-primary rounded-lg p-2 xl:p-4 text-black font-semibold">
+                                Only 5 cars left!
+                            </label>
+                        </div>
+                        <!-- color customize -->
+                        <ul class="flex xl:flex-col items-center gap-4">
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-secondary outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#DF4C30] focus:outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#C6C9CE] focus:outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#212329] border border-light focus:outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#E6E7E8] focus:outline-2 outline-white outline-offset-4"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- features -->
+                <div class="w-full flex flex-col xl:flex-row  justify-center gap-2 xl:gap-4">
+                    <div class="car-features">
+                        <i class="fas fa-clipboard-check text-primary text-2xl"></i>
+                        <p class="text-lg">Cars with Certificate of Title</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-shield-halved text-primary text-2xl"></i>
+                        <p class="text-lg">Service up to 5 years / 150,000km</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-tag text-primary text-2xl"></i>
+                        <p class="text-lg">We beat any offer</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-percent text-primary text-2xl"></i>
+                        <p class="text-lg">0.01% Credit</p>
+                    </div>
+                </div>
+                <!-- gallery -->
+                <div class="w-full flex overflow-x-auto gap-4 mt-2 mb-8">
+                    <img src="src/assets/img/car1.png" alt="car-1" class="car-image">
+                    <img src="src/assets/img/car2.png" alt="car-2" class="car-image">
+                    <img src="src/assets/img/car3.png" alt="car-3" class="car-image">
+                    <img src="src/assets/img/car4.png" alt="car-4" class="car-image">
+                    <img src="src/assets/img/car5.png" alt="car-5" class="car-image">
+                </div>
+            </div>
+        </section>
+        <!-- tank 500 offer section -->
+        <section class="text-white p-6 bg-dark-2 pt-6">
+            <div class="mx-auto w-full xl:w-[75%] flex flex-col items-center gap-4 relative">
+                <!-- title -->
+                <div class="w-full flex flex-col xl:flex-row justify-center gap-2">
+                    <!-- car model -->
+                    <div class="flex flex-col xl:flex-row items-center justify-center gap-2 w-full xl:w-[65%]">
+                        <!-- color customize -->
+                        <ul class="flex xl:flex-col items-center gap-4">
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#B0A798] outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#E6E7E8] focus:outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#A2A4AB] focus:outline-2 outline-white outline-offset-4"></li>
+                            <li tabindex="1" class="w-8 h-8 rounded-full cursor-pointer bg-[#212329] border border-light focus:outline-2 outline-white outline-offset-4"></li>
+                        </ul>
+                        <!-- car image -->
+                        <div class="relative pt-14">
+                            <a href="#car-modal">
+                                <img src="src/assets/img/main2.png" alt="tank 500" class=" ">
+                            </a>
+                            <!-- label -->
+                            <label  class="absolute top-16 right-8 text-sm xl:top-24 xl:right-40 rotate-20 bg-primary rounded-lg p-2 xl:p-4 text-black font-semibold">
+                                Only 5 cars left!
+                            </label>
+                        </div>
+                        <!-- car modal -->
+                        <div class="bg-neutral-900/70 fixed inset-0 hidden has-[:target]:block">
+                            <div id="car-modal" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark-1 w-[95%] xl:w-[80%] z-20 hidden target:flex flex-col items-center justify-center p-4 rounded-lg">
+                                <img src="src/assets/img/main2.png" alt="tank 500" class="w-[70%] relative">
+                                <!-- thumbnails -->
+                                <div class="w-full xl:w-[65%] flex gap-4 mt-2 mb-8">
+                                    <a href="#car6">
+                                        <img src="src/assets/img/car6.png"
+                                             alt="car-6"
+                                             class="w-24 xl:w-40 h-20 xl:h-36 hover:scale-130 hover:border-4 cursor-pointer border-primary object-cover rounded-xl">
+                                    </a>
+                                    <a href="#car7">
+                                        <img src="src/assets/img/car7.png"
+                                             alt="car-7"
+                                             class="w-24 xl:w-40 h-20 xl:h-36 hover:scale-130 hover:border-4 cursor-pointer border-primary object-cover rounded-xl">
+                                    </a>
+                                    <a href="#car8">
+                                        <img src="src/assets/img/car8.png"
+                                             alt="car-8"
+                                             class="w-24 xl:w-40 h-20 xl:h-36 hover:scale-130 hover:border-4 cursor-pointer border-primary object-cover rounded-xl">
+                                    </a>
+                                    <a href="#car9">
+                                        <img src="src/assets/img/car9.png"
+                                             alt="car-9"
+                                             class="w-24 xl:w-40 h-20 xl:h-36 hover:scale-130 hover:border-4 cursor-pointer border-primary object-cover rounded-xl">
+                                    </a>
+                                    <a href="#car10">
+                                        <img src="src/assets/img/car10.png"
+                                             alt="car-10"
+                                             class="w-24 xl:w-40 h-20 xl:h-36 hover:scale-130 hover:border-4 cursor-pointer border-primary object-cover rounded-xl">
+                                    </a>
+                                </div>
+                                <!-- close button -->
+                                <a href="#">
+                                    <i class="fas fa-xmark text-3xl absolute top-8 right-8 cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                            <!-- picbox -->
+                            <!-- car6 fullscreen -->
+                            <div id="car6"
+                                 class="mx-auto fixed inset-0 z-50 hidden target:flex items-center justify-center w-[90%] xl:w-[75%]">
+    
+                                <img src="src/assets/img/car6.png"
+                                     alt="car-6"
+                                     class="w-full xl:w-[80%] h-[50%] xl:h-[80%] object-cover rounded-xl border-4 border-primary">
+                                <a href="#car-modal"
+                                   class="absolute top-60 xl:top-28 right-4 xl:right-40">
+                                    <i class="fas fa-xmark text-3xl cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                            <!-- car7 fullscreen -->
+                            <div id="car7"
+                                 class="mx-auto fixed inset-0 z-50 hidden target:flex items-center justify-center w-[75%]">
+    
+                                <img src="src/assets/img/car7.png"
+                                     alt="car-7"
+                                     class="w-full xl:w-[80%] h-[50%] xl:h-[80%] object-cover rounded-xl border-4 border-primary">
+                                <a href="#car-modal"
+                                   class="absolute top-60 xl:top-28 right-4 xl:right-40">
+                                    <i class="fas fa-xmark text-3xl cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                            <!-- car8 fullscreen -->
+                            <div id="car8"
+                                 class="mx-auto fixed inset-0 z-50 hidden target:flex items-center justify-center w-[75%]">
+    
+                                <img src="src/assets/img/car8.png"
+                                     alt="car-8"
+                                     class="w-full xl:w-[80%] h-[50%] xl:h-[80%] object-cover rounded-xl border-4 border-primary">
+                                <a href="#car-modal"
+                                   class="absolute top-60 xl:top-28 right-4 xl:right-40">
+                                    <i class="fas fa-xmark text-3xl cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                            <!-- car9 fullscreen -->
+                            <div id="car9"
+                                 class="mx-auto fixed inset-0 z-50 hidden target:flex items-center justify-center w-[75%]">
+    
+                                <img src="src/assets/img/car9.png"
+                                     alt="car-9"
+                                     class="w-full xl:w-[80%] h-[50%] xl:h-[80%] object-cover rounded-xl border-4 border-primary">
+                                <a href="#car-modal"
+                                   class="absolute top-60 xl:top-28 right-4 xl:right-40">
+                                    <i class="fas fa-xmark text-3xl cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                            <!-- car10 fullscreen -->
+                            <div id="car10"
+                                 class="mx-auto fixed inset-0 z-50 hidden target:flex items-center justify-center w-[75%]">
+    
+                                <img src="src/assets/img/car10.png"
+                                     alt="car-10"
+                                     class="w-full xl:w-[80%] h-[50%] xl:h-[80%] object-cover rounded-xl border-4 border-primary">
+                                <a href="#car-modal"
+                                   class="absolute top-60 xl:top-28 right-4 xl:right-40">
+                                    <i class="fas fa-xmark text-3xl cursor-pointer hover:text-primary"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- car information -->
+                    <div class="flex flex-col items-start gap-4 w-full  xl:w-[35%] pt-4 xl:pt-14 ">
+                        <p class="text-primary text-2xl font-semibold">Only at Avtorus!</p>
+                        <h3 class="text-4xl font-bold">TANK 500</h3>
+                        <p class="text-3xl font-semibold">Benefit up to 700,000 ₽</p>
+                        <div class="flex items-center justify-center gap-6 bg-secondary rounded-2xl py-2 px-8">
+                            <i class="fas fa-triangle-exclamation"></i>
+                            <p>Limited Time Offer!</p>
+                            <i class="fas fa-triangle-exclamation"></i>
+                        </div>
+                        <!-- buttons -->
+                        <div class="space-y-3">
+                            <button class="btn btn-primary w-full py-4">
+                                <span>Find out the price on promotion</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                            <button class="btn btn-secondary w-full py-4">
+                                <span>Test drive</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                            <button class="btn btn-secondary w-full py-4">
+                                <span>Calculate a loan</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- features -->
+                <div class="w-full flex flex-col xl:flex-row  justify-center gap-2 xl:gap-4">
+                    <div class="car-features">
+                        <i class="fas fa-clipboard-check text-primary text-2xl"></i>
+                        <p class="text-lg">Cars with Certificate of Title</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-shield-halved text-primary text-2xl"></i>
+                        <p class="text-lg">Service up to 5 years / 150,000km</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-tag text-primary text-2xl"></i>
+                        <p class="text-lg">We beat any offer</p>
+                    </div>
+                    <div class="car-features">
+                        <i class="fas fa-percent text-primary text-2xl"></i>
+                        <p class="text-lg">0.01% Credit</p>
+                    </div>
+                </div>
+                <!-- gallery -->
+                <div class="w-full flex overflow-x-auto gap-4 mt-2 mb-8">
+                    <img src="src/assets/img/car6.png" alt="car-6" class="car-image">
+                    <img src="src/assets/img/car7.png" alt="car-7" class="car-image">
+                    <img src="src/assets/img/car8.png" alt="car-8" class="car-image">
+                    <img src="src/assets/img/car9.png" alt="car-9" class="car-image">
+                    <img src="src/assets/img/car10.png" alt="car-10" class="car-image">
+                </div>
+            </div>
+        </section>
+        <!-- choose a package -->
+        <section class="mx-auto flex flex-col items-center justify-center gap-4 text-white mt-20 w-full xl:w-[75%]">
+            <h2 class="text-3xl xl:text-5xl font-bold">CHOOSE A PACKAGE</h2>
+            <!-- select box -->
+            <div class=" w-full grid grid-cols-1 xl:grid-cols-3 gap-4 py-6 px-4">
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm text-light">Model</label>
+                    <select class="bg-dark-2 text-white py-3 px-4 rounded-lg border border-light">
+                                <option>Select model</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm text-light">Equipment</label>
+                    <select class="bg-dark-2 text-white py-3 px-4 rounded-lg border border-light">
+                        <option>Select equipment</option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="mb-2 text-sm text-light">Engine</label>
+                    <select class="bg-dark-2 text-white py-3 px-4 rounded-lg border border-light">
+                        <option>Select engine</option>
+                    </select>
+                </div>
+            </div>
+            <!-- packages -->
+            <div class="w-full px-4 flex flex-col items-center">
+                <div class="car-card">
+                    <!-- car introduction -->
+                    <img src="src/assets/img/dealer1.png" alt="Tank 300" class="w-full xl:w-[30%]">
+                    <div class="space-y-4 w-full xl:w-[35%]">
+                        <div class="flex flex-col mt-0 xl:mt-4 gap-2">
+                            <h3 class="text-4xl font-bold">TANK 300</h3>
+                            <p class="text-xl text-light">2.0L Gasoline, AWD, Automatic</p>
+                            <div class="text-3xl font-bold mt-6">
+                                <del>3,649,000 ₽</del>
+                            </div>
+                            <div class="flex flex-col xl:flex-row gap-3 xl:gap-6 mt-6 text-xl xl:text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-tags text-primary text-2xl "></i>
+                                    Trade-in bonus up to 450,000 ₽
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-gift text-primary text-2xl"></i>
+                                    Free ceramic coating!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buttons -->
+                    <div
+                        class="flex flex-col justify-start gap-4 w-full xl:w-[35%] mt-2 xl:mt-6">
+                        <button
+                            class="btn btn-primary w-full xl:w-[95%]">
+                            Get Offer
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                        <button
+                            class="btn btn-secondary w-full xl:w-[95%]">
+                            Test Drive
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <!-- car introduction -->
+                    <img src="src/assets/img/dealer1.png" alt="Tank 300" class="w-full xl:w-[30%]">
+                    <div class="space-y-4 w-full xl:w-[35%]">
+                        <div class="flex flex-col mt-0 xl:mt-4 gap-2">
+                            <h3 class="text-4xl font-bold">TANK 300</h3>
+                            <p class="text-xl text-light">2.0L Gasoline, AWD, Automatic</p>
+                            <div class="text-3xl font-bold mt-6">
+                                <del>3,649,000 ₽</del>
+                            </div>
+                            <div class="flex flex-col xl:flex-row gap-3 xl:gap-6 mt-6 text-xl xl:text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-tags text-primary text-2xl "></i>
+                                    Trade-in bonus up to 450,000 ₽
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-gift text-primary text-2xl"></i>
+                                    Free ceramic coating!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buttons -->
+                    <div
+                        class="flex flex-col justify-start gap-4 w-full xl:w-[35%] mt-2 xl:mt-6">
+                        <button
+                            class="btn btn-primary w-full xl:w-[95%]">
+                            Get Offer
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                        <button
+                            class="btn btn-secondary w-full xl:w-[95%]">
+                            Test Drive
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="car-card">
+                    <!-- car introduction -->
+                    <img src="src/assets/img/dealer1.png" alt="Tank 300" class="w-full xl:w-[30%]">
+                    <div class="space-y-4 w-full xl:w-[35%]">
+                        <div class="flex flex-col mt-0 xl:mt-4 gap-2">
+                            <h3 class="text-4xl font-bold">TANK 300</h3>
+                            <p class="text-xl text-light">2.0L Gasoline, AWD, Automatic</p>
+                            <div class="text-3xl font-bold mt-6">
+                                <del>3,649,000 ₽</del>
+                            </div>
+                            <div class="flex flex-col xl:flex-row gap-3 xl:gap-6 mt-6 text-xl xl:text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-tags text-primary text-2xl "></i>
+                                    Trade-in bonus up to 450,000 ₽
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-gift text-primary text-2xl"></i>
+                                    Free ceramic coating!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- buttons -->
+                    <div
+                        class="flex flex-col justify-start gap-4 w-full xl:w-[35%] mt-2 xl:mt-6">
+                        <button
+                            class="btn btn-primary w-full xl:w-[95%]">
+                            Get Offer
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                        <button
+                            class="btn btn-secondary w-full xl:w-[95%]">
+                            Test Drive
+                            <i class="fas fa-angle-right ms-3"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="btn btn-secondary border-light hover:bg-dark-2 text-white mt-6">Load More</button>
+
+                <div class="w-full flex flex-col xl:flex-row gap-4 mt-22 mb-8">
+                    <div class="w-full xl:w-1/2">
+                        <img src="src/assets/img/gift.png" alt="gift car" class="w-full h-84  object-cover rounded-lg">
+                    </div>
+                    <div class="w-full xl:w-1/2">
+                        <h4 class="text-4xl font-bold mt-4 xl:mt-16">
+                            EXCHANGE BY TRADE-IN<br>
+                            ON FAVORABLE TERMS
+                        </h4>
+                        <button class="btn btn-primary mt-4 xl:mt-16 ">
+                            <span class="font-bold text-lg">Request a call</span>
+                            <i class="fas fa-angle-right ms-4"></i> 
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- submit section -->
+        <section class="w-full mt-10">
+            <div class="w-full h-156 xl:max-h-88 flex flex-col items-center bg-backcar-2 xl:bg-backcar bg-center xl:bg-position-[center_60%] bg-cover text-white p-4">
+                <div class="w-full xl:w-[75%] py-4 xl:py-12">
+                    <h2 class="text-4xl font-bold">APPLY FOR A LOAN</h3>
+                    <p class="mt-4">and get approved in 1 day!</p>
+
+                    <form class="mt-2 xl:mt-8 space-y-2">
+                        <label class="block">Phone</label>
+                        <div>
+                            <input type="tel" placeholder="+7 (___) ___ __ __" class="rounded-lg border border-light bg-dark-2 px-10 py-4 outline-none  w-full xl:w-fit">
+                            <button type="submit" class="btn btn-primary py-4 mt-2 xl:mt-0">
+                                <span class="font-semibold">Submit an application</span>
+                                <i class="fas fa-angle-right ms-4"></i>
+                            </button>
+                        </div>
+                        <input type="checkbox" id="agreement">
+                        <label for="agreement" class="cursor-pointer">
+                            I agree to the processing of personal data.
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- special offer -->
+        <section class="mx-auto w-full xl:w-[75%] text-white space-y-20 mt-8 pt-8 px-4">
+            <div class="bg-dark-3 rounded-xl px-2 xl:px-12 py-8 flex flex-col xl:flex-row items-start xl:items-center justify-between">
+                <div class="w-full xl:w-auto">
+                    <h2 class="text-3xl xl:text-4xl font-bold">Individual offer <br>for corporate clients</h2>
+                    <button class="btn btn-primary py-4 mt-8 xl:mt-12">
+                        <span class="font-semibold">Submit an application</span>
+                        <i class="fas fa-angle-right ms-4"></i>
+                    </button><br>
+                </div>
+                <div class="flex items-center justify-center gap-4 mt-8 xl:mt-0 ">
+                    <img src="src/assets/img/worker.png" alt="worker" class="w-36 xl:w-48 h-36 xl:h-48 object-cover rounded-full">
+                    <div>
+                        <h3 class="text-3xl font-bold">Tatyana Sannikova</h3>
+                        <p class="mt-4 text-light">Corporate Sales Department <br> AVTORUS</p>
+                    </div>
+                </div>
+            </div>
+            <!-- address -->
+            <div class="w-full min-h-112.5 bg-map bg-center bg-cover relative rounded-xl mb-72 xl:mb-4">
+                <!-- absolute box 1 -->
+                <div class="absolute top-[37%] right-[49%] w-8 h-8 p-2 ">
+                    <i class="fas fa-message fa-stack-1x text-5xl text-primary relative">
+                        <img src="src/assets/img/logo.png" alt="logo" class="h-6 absolute top-6 right-0">
+                    </i>
+                </div>
+                <!-- absolute box 2 -->
+                <div class="absolute w-[80%] xl:w-[96%] -bottom-64 xl:bottom-4 right-14 md:right-28 xl:right-8 bg-dark-3 rounded-xl px-6 py-6 flex flex-col xl:flex-row items-start xl:items-center xl:justify-between  ">
+                    <div class="space-y-2">
+                        <p class="text-light">Address</p>
+                        <h4 class="text-xl xl:text-2xl font-semibold">
+                            Yaroslavskoe Shosse, Building <br>2B, Building 3 (MKAD, 95 km)
+                        </h4>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-light">Phone</p>
+                        <h4 class="text-xl xl:text-2xl font-semibold">
+                            +7 (999) 999-99-99
+                        </h4>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-circle text-green-400 text-[7px]"></i>
+                            <span>We are online</span>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <p class="text-light">Opening hours</p>
+                        <h4 class="text-xl xl:text-2xl font-semibold">
+                            Daily <br>from 09:00 to 21:00
+                        </h4>
+                    </div>
+                    <button class="btn btn-primary mt-4">
+                        <span class="font-semibold">Request a call</span>
+                        <i class="fas fa-angle-right ms-4"></i>
+                    </button><br>
+                </div>
+            </div>
+        </section>
+        <!-- disclaimer information -->
+        <details class="mx-auto w-full xl:w-[75%] text-white p-4 mt-8" open>
+            <summary class="cursor-pointer font-semibold flex items-center gap-4">
+                <p>Disclaimer</p>
+                <i class="fas fa-chevron-down text-gray-400"></i>
+            </summary>
+            <div class="text-light text-justify mt-6 space-y-4 pb-4 border-b border-light">
+                <p>
+                    TANK 300 for 3,799,000 rubles including maintenance. Price for the TANK 300 Adventure trim level with a 2.0T 4WD engine, manufactured in 2023, in white, including a trade-in benefit of 300,000 rubles. Used vehicles accepted for trade-in must have been owned and registered with the State Traffic Safety Inspectorate for at least six months (three months for TANK, Haval, and Great Wall vehicles) prior to trade-in. To confirm ownership of the vehicle being traded in, the owner must provide a copy of the vehicle title or registration certificate, or a vehicle registration card from the State Traffic Safety Inspectorate with a stamp and signature. For more information, please contact the TANK AVTORUS sales team. This offer is limited, not a full offer, and is valid from April 1, 2024.
+                </p>
+                <p>
+                    TANK 500 for 5,349,000 rubles, including incentives. The price for the TANK 500 in the Adventure trim level with a 3.0T 4WD engine, manufactured in 2023, in white, includes a direct benefit of 950,000 rubles. Contact TANK AVTORUS sales managers for details. This offer is limited, not a full offer, and is valid from April 1, 2024.
+                </p>
+            </div>
+        </details>
+    </main>
+
+    <footer>
+        <section class="mx-auto w-full xl:w-[75%] text-white p-4 space-y-4 xl:space-y-6">
+            <!-- upper part -->
+            <div class="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8 xl:gap-0">
+                <div class="flex flex-col">
+                    <h2 class="font-semibold text-xl xl:text-2xl">AVTORUS  TANK</h2>
+                    <p class="text-light text-sm ">Official dealer</p>
+                </div>
+    
+                <div class="flex flex-col xl:flex-row items-center gap-6 ">
+                    <div class="w-full xl:w-fit">
+                        <p class="text-xl">+7 (999) 999-99-99</p>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-circle text-green-400 text-[8px]"></i>
+                            <span class="text-light">We are in touch</span>
+                        </div>
+                    </div>
+                    <!-- request call button -->
+                    <label for="call-modal" class="w-full xl:w-fit text-center bg-primary hover:bg-orange-500 rounded-lg py-3 px-6 text-black cursor-pointer m-1">
+                        <i class="fas fa-phone text-black text-2xl xl:text-lg"></i>
+                        <span class="font-semibold text-xl xl:text-lg ms-2"> Request a call</span>
+                    </label>
+                </div>
+            </div>
+            <div class="flex items-center justify-between py-2">
+                <div class="xl:flex items-center gap-2 hidden text-gray-500">
+                    <i class="fas fa-location-dot"></i>
+                    <p class="font-semibold">Yaroslavskoe shosse, property 2B, building 3 (MKAD, 95 km)</p>
+                </div>
+    
+                <div class="xl:flex gap-4 hidden ">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-gear text-primary"></i>
+                        <p class="">Schedule a service appointment</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-car text-primary"></i>
+                        <p class="">Test Drive</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-b border-light pb-10">
+                <p class="text-light text-sm ">Official dealer</p>
+                <h5 class="text-lg">
+                    OOO A AVTORUS MYTISHCHI | OGRN 1147746695161, INN 7728881903
+                </h5>
+            </div>
+            <!-- lower part -->
+            <div class="flex flex-col xl:flex-row items-start xl:items-center justify-between text-light mb-4 gap-4">
+                <p class="text-lg order-2 xl:order-1">&copy; 2024, AVTORUS TANK</p>
+                <div class="flex gap-8 text-lg order-1 xl:order-2">
+                    <a href="#" class="text-sm xl:text-lg">Legal information</a>
+                    <a href="#" class="text-sm xl:text-lg">Conditions of the promotion</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>
