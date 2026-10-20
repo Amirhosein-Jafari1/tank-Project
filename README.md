@@ -6,7 +6,7 @@ The project focuses on clean UI, responsive design, reusable components, and mod
 ---
 
 ## 🔗 Live Demo
-[Github Pages](https://amirhosein-jafari1.github.io/tank-Project/)
+[Vercel](https://tank-project-nu.vercel.app/)
 
 ---
 
